@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  foundchurch:
+    image: billdocker/fc_api:v2
+    restart: always
+    ports:
+      - 8002:80
