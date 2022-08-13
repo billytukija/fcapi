@@ -20,12 +20,5 @@ namespace found_church_api.Controllers
         [HttpGet("findBy/{search}")]
         public async Task<List<ChurchDto>> Get([FromRoute] String search) =>
              await _churchesService.GetBySearch(search);
-
-        [HttpPost]
-        public async Task Post(AddChurchDto church)
-        {
-            if (ModelState.IsValid)
-                await _churchesService.CreateAsync(church);
-        }
     }
 }
